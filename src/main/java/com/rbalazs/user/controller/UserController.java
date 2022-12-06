@@ -33,7 +33,7 @@ public class UserController{
         return "User named " + userRegistrationDTO.getName() + " has been added to the database.";
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("/user/{name}")
     public Integer getUserIdByName(@PathVariable("name") String name){
         return userService.getUserIdByName(name);
     }
