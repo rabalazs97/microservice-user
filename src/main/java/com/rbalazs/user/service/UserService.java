@@ -2,7 +2,6 @@ package com.rbalazs.user.service;
 
 import java.util.Optional;
 
-import com.rbalazs.user.exception.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
