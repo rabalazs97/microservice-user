@@ -7,7 +7,6 @@ import com.rbalazs.user.dto.UserRegistrationDTO;
 import com.rbalazs.user.service.FibonacciService;
 import com.rbalazs.user.service.UserService;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -19,9 +18,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.math.BigInteger;
 import java.util.Arrays;
-import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.BDDMockito.given;
 
 @WebMvcTest
