@@ -79,10 +79,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.assertj:assertj-core:3.22.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest:2.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter:5.8.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.8.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.8.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-params:5.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.8.2" level="project" />
@@ -121,6 +117,26 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-orm:5.3.23" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.3.23" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:5.3.23" level="project" />
-    <orderEntry type="library" name="Maven: com.h2database:h2:2.1.214" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.h2database:h2:2.1.214" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.postgresql:postgresql:42.3.7" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.checkerframework:checker-qual:3.5.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:junit-jupiter:1.17.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:testcontainers:1.17.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:2.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.commons:commons-compress:1.22" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.rnorth.duct-tape:duct-tape:1.0.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains:annotations:17.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.github.docker-java:docker-java-api:3.2.13" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.github.docker-java:docker-java-transport-zerodep:3.2.13" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.github.docker-java:docker-java-transport:3.2.13" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: net.java.dev.jna:jna:5.8.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.8.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.8.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:postgresql:1.17.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:jdbc:1.17.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.testcontainers:database-commons:1.17.6" level="project" />
   </component>
 </module>
