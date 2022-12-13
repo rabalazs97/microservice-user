@@ -24,8 +24,9 @@ pipeline {
     post {
         success {
             archiveArtifacts artifacts: '**/*.jar'
+            cleanWs()
         }
-        always {
+        failure {
             cleanWs()
         }
     }
