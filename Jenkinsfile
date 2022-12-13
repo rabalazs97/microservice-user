@@ -1,6 +1,13 @@
 pipeline {
-    agent any
-
+    environment {
+        JAVA_TOOL_OPTIONS = "-Duser.home=/var/maven"
+    }
+    agent {
+        docker {
+            image "maven:3.8.6-openjdk-18"
+            args '-u root -v /home/ci-cd/maven-repo:/var/maven/.m2 -v /var/run/docker.sock:/var/run/docker.sock -e MAVEN_CONFIG=/var/maven/.m2'
+        }
+    }
     stages {
         stage("Package") {
             steps {
@@ -20,7 +27,7 @@ pipeline {
         }
     }
     post {
-        always {
+        failure {
             cleanWs()
         }
     }
