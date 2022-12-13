@@ -8,16 +8,24 @@ pipeline {
             args '-u root -v /home/ci-cd/maven-repo:/var/maven/.m2 -e MAVEN_CONFIG=/var/maven/.m2'
         }
     }
-
     stages {
-        stage("Build") {
+        stage("Package") {
             steps {
                 sh "mvn -version"
-                sh "mvn clean install"
+                sh "mvn clean package -DskipTests"
+            }
+        }
+        stage("Unit Tests"){
+            steps {
+                sh "mvn test"
+            }
+        }
+        stage("Integration Tests"){
+            steps {
+                sh "mvn failsafe:integration-test"
             }
         }
     }
-
     post {
         always {
             cleanWs()
