@@ -20,13 +20,11 @@ pipeline {
                 sh "mvn test"
             }
         }
-        stage("Integration Tests"){
-            steps {
-                sh "mvn failsafe:integration-test"
-            }
-        }
     }
     post {
+        success {
+            archiveArtifacts artifacts: '**/*.jar'
+        }
         always {
             cleanWs()
         }
