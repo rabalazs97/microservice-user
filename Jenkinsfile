@@ -27,13 +27,17 @@ pipeline {
         }
         stage("Build image and push to repo"){
             steps {
-                sh "mvn spring-boot:build-image -Dlatest"
-                sh "docker -t user:latest rabalazs97/user:latest"
+                sh "mvn spring-boot:build-image"
+                sh "docker tag user:0.0.1-SNAPSHOT rabalazs97/user:latest"
                 sh "docker push rabalazs97/user:latest"
+                sh "docker rmi user:0.0.1-SNAPSHOT rabalazs97/user:latest"
             }
         }
     }
     post {
+        success {
+            build job: 'Deploy'
+        }
         always {
             cleanWs()
         }
