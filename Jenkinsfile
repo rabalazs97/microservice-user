@@ -33,7 +33,7 @@ pipeline {
     }
     post {
         success {
-            build job: 'Deploy'
+            build job: 'Deploy-user'
         }
         always {
             cleanWs()
