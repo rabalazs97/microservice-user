@@ -25,6 +25,11 @@ pipeline {
                 sh "mvn failsafe:integration-test"
             }
         }
+        stage("Build image and push to repo"){
+            steps {
+                sh "mvn spring-boot:build "
+            }
+        }
     }
     post {
         always {
