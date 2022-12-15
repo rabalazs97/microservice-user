@@ -27,7 +27,9 @@ pipeline {
         }
         stage("Build image and push to repo"){
             steps {
-                sh "mvn spring-boot:build "
+                sh "mvn spring-boot:build-image -Dlatest"
+                sh "docker -t user:latest rabalazs97/user:latest"
+                sh "docker push rabalazs97/user:latest"
             }
         }
     }
