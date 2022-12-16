@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,6 +33,7 @@ public class FibonacciService {
         return fibList.stream().map(fib -> new FibonacciResponseDTO(fib.getSerialNumber(), new BigInteger(fib.getFibonacciNumber()))).collect(Collectors.toList());
     }
 
+    @Transactional
     public List<FibonacciResponseDTO> getUserSpecificHistory(int id) {
         Optional<UserModel> user = userService.getUserById(id);
         if(user.isEmpty()) return new ArrayList<>();

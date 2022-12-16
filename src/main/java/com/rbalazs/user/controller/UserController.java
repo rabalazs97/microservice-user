@@ -30,6 +30,8 @@ public class UserController{
 
     @PostMapping
     public String addUser(@RequestBody UserRegistrationDTO userRegistrationDTO){
+        if(userRegistrationDTO.getName() == "") return "Please provide a name!";
+        if(userService.getUserIdByName(userRegistrationDTO.getName()) != 0) return "User already exists."; 
         userService.addUser(userRegistrationDTO);
         return "User named " + userRegistrationDTO.getName() + " has been added to the database.";
     }
