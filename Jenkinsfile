@@ -27,13 +27,13 @@ pipeline {
         }
         stage("Build image and push to repo"){
             steps {
-                sh "mvn spring-boot:build-image"
+                sh "mvn spring-boot:build-image -DskipTests"
             }
         }
     }
     post {
         success {
-            build job: 'Deploy-user'
+            build job: 'deploy-user'
         }
         always {
             cleanWs()
