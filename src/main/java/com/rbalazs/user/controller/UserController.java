@@ -12,6 +12,7 @@ import com.rbalazs.user.service.FibonacciService;
 import com.rbalazs.user.service.UserService;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UserController{
     private final UserService userService;
     private final FibonacciService fibonacciService;
