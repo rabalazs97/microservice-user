@@ -4,12 +4,12 @@ pipeline {
     }
     agent {
         docker {
-            image "maven:3.8.6-openjdk-18"
+            image "maven:3.8.1-openjdk-17-slim"
             args '-u root --net=host -v /home/ci-cd/maven-repo:/var/maven/.m2 -v /var/run/docker.sock:/var/run/docker.sock -e MAVEN_CONFIG=/var/maven/.m2'
         }
     }
     stages {
-        stage("Package") {
+        stage("Build") {
             steps {
                 sh "mvn -version"
                 sh "mvn clean package -DskipTests"
